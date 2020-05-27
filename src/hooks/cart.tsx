@@ -46,8 +46,6 @@ const CartProvider: React.FC = ({ children }) => {
 
   const addToCart = useCallback(
     async product => {
-      // await AsyncStorage.removeItem('@GoMarketplace:products');
-      // setProducts([]);
       const productExistsIndex = products.findIndex(
         item => item.id === product.id,
       );
