@@ -172,22 +172,9 @@ describe('Cart Context', () => {
       </CartProvider>,
     );
 
-    // Did not pass the test that way
-    // await act(async () => {
-    //   fireEvent.press(getByTestId('add-to-cart'));
-    //   fireEvent.press(getByTestId('increment'));
-    //   fireEvent.press(getByTestId('decrement'));
-    // });
-
     await act(async () => {
       fireEvent.press(getByTestId('add-to-cart'));
-    });
-
-    await act(async () => {
       fireEvent.press(getByTestId('increment'));
-    });
-
-    await act(async () => {
       fireEvent.press(getByTestId('decrement'));
     });
 
